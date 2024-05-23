@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sandwichbuilder.club</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Background Music</title>
+  </head>
+  <body id="body">
+    <div
+      id="bg"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          height: 100vh;
+          background: url(/Assets/largeBg.png) no-repeat;
+          background-size: cover;
+        "
+      ></div>
+    </div>
+
+    <div
+      id="bg-mobile"
+      style="
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 120%;
+        height: 120%;
+      "
+    >
+      <div
+        style="
+          width: 120%;
+          height: 120%;
+          background: url(/Assets/bgMobile.mov);
+          background-size: cover;
+        "
+      ></div>
+    </div>
+
+    <div
+      id="sandwichBuild"
+      style="
+        position: absolute;
+        left: 22%;
+        top: 110px;
+        height: 75%;
+        display: flex;
+        justify-content: end;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 25%;
+        border: solid transparent 1px;
+      "
+    >
+      <!-- <img src="/Assets/Whole-Bread.png" style="width: 350px; height: 150px; position: relative; margin-left: 20px;"> -->
+      <!-- <img src="/Assets/Rye-Bread.png" style="width: 300px; height: 230px; position: relative; margin-left: 20px; margin-top: -280px;">
+        <img src="/Assets/Pumpernickel-Bread.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Ham.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -250px;">
+        <img src="/Assets/Lox.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Pastrami.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Lettuce.png" style="width: 260px; height: 160px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Tomato.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Onions.png" style="width: 230px; height: 130px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Pickles.png" style="width: 220px; height: 90px; position: relative; margin-left: 20px; margin-top: -100px;">
+        <img src="/Assets/Cheddar-cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -150px;">
+        <img src="/Assets/Provolone-cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Swiss-cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/American-cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Pepper-Jack-Cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Hot-Sauce.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Mayonase.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/BBQ-sauce.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Mustard.png" style="width: 200px; height: 100px; position: relative; margin-left: 20px; margin-top: -170px;">
+        <img src="/Assets/Bacon.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -150px;">
+        <img src="/Assets/Turkey.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Salami.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Tuna.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Avacado.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Beef.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Bologna.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -230px;">
+        <img src="/Assets/Jalapenos.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;"> -->
+    </div>
+
+    <div
+      id="ingredientsPlace"
+      style="
+        width: 250px;
+        height: 150px;
+        gap: 10px;
+        background-color: #43444763;
+        position: absolute;
+        left: 70%;
+        border-radius: 20px;
+        top: 250px;
+        border: solid white 0.5px;
+        height: 50%;
+        width: 26%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 0px;
+        padding: 10px;
+      "
+    >
+      <!-- <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;"> -->
+      <!-- <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;"> -->
+    </div>
+
+    <h1
+      id="ingredientSelctedTxt"
+      style="
+        position: absolute;
+        color: white;
+        right: 20px;
+        font-size: 25px;
+        font-weight: 200;
+      "
+    ></h1>
+    <!-- <img id="bg" style="height: 100vh; width: 100vw; background-color: #5f8880; background-image: url(/Assets/largeBg.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: center;"> </img> -->
+
+    <img
+      src="/Assets/DrittyPope LogoDiamond.png"
+      style="
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        width: 150px;
+        height: 150px;
+      "
+    />
+    <div style="display: flex; justify-content: center">
+      <h1
+        style="
+          position: absolute;
+          color: white;
+          text-align: center;
+          margin-top: 40px;
+          font-size: 4vw;
+          font-weight: 200;
+          background-color: rgb(51, 47, 47);
+        "
+      >
+        SANDWICHBUILDER.CLUB
+      </h1>
+      <h1
+        style="
+          position: absolute;
+          color: white;
+          text-align: center;
+          top: 80px;
+          font-size: 2.5vw;
+          font-weight: 200;
+          background-color: rgb(51, 47, 47);
+        "
+      >
+        by Dritty Pope
+      </h1>
+      <h1
+        style="
+          position: absolute;
+          color: white;
+          text-align: center;
+          top: 125px;
+          font-size: 2.5vw;
+          font-weight: 200;
+          background-color: rgb(51, 47, 47);
+        "
+      >
+        No music on an empty stomach. Make a sammich.
+      </h1>
+    </div>
+
+    <div style="display: flex; justify-content: center">
+      <div
+        id="submitBtn"
+        onclick="submitSandwich()"
+        class="submitBtn"
+        style="
+          position: absolute;
+          bottom: 20px;
+          width: 250px;
+          height: 75px;
+          border-radius: 25px;
+          display: none;
+        "
+      >
+        <h1
+          id="submitTxt"
+          style="
+            color: white;
+            text-align: center;
+            margin-top: 13px;
+            font-size: 40px;
+          "
+        >
+          Submit
+        </h1>
+      </div>
+    </div>
+
+    <div
+      id="submitPage"
+      style="
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      "
+    >
+      <div
+        style="
+          position: relative;
+          width: 850px;
+          height: 550px;
+          border-radius: 20px;
+          background-color: #6da7a5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          border: solid black 3px;
+        "
+      >
+        <h1
+          onclick="document.getElementById('submitPage').style.display = 'none' "
+          style="position: absolute; cursor: pointer; top: 0px; right: 25px"
+        >
+          X
+        </h1>
+        <h1
+          style="
+            color: white;
+            text-align: center;
+            font-weight: 200;
+            font-size: 60px;
+            margin-top: 20px;
+          "
+        >
+          THANK YOU!
+        </h1>
+
+        <h1
+          onclick="window.open('https://drittypope.bandcamp.com/', '_blank').focus();"
+          style="
+            color: rgb(152, 231, 255);
+            text-decoration-line: underline;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 200;
+            font-size: 35px;
+            width: 80%;
+            margin-top: 0px;
+          "
+        >
+          MERCH
+        </h1>
+        <h1
+          onclick="window.open('https://www.youtube.com/@drittypope', '_blank').focus();"
+          style="
+            color: rgb(152, 231, 255);
+            text-decoration-line: underline;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 200;
+            font-size: 35px;
+            width: 80%;
+            margin-top: 0px;
+          "
+        >
+          VIDEOS
+        </h1>
+        <h1
+          onclick="window.open('https://open.spotify.com/artist/33yHys6DDuv2dINncFuX0F', '_blank').focus();"
+          style="
+            color: rgb(152, 231, 255);
+            text-decoration-line: underline;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 200;
+            font-size: 35px;
+            width: 80%;
+            margin-top: 0px;
+          "
+        >
+          SPOTIFY
+        </h1>
+        <h1
+          onclick="window.open('https://music.apple.com/us/artist/dritty-pope/1164702597', '_blank').focus();"
+          style="
+            color: rgb(152, 231, 255);
+            text-decoration-line: underline;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 200;
+            font-size: 35px;
+            width: 80%;
+            margin-top: 0px;
+          "
+        >
+          APPLE MUSIC
+        </h1>
+
+        <img
+          src="/Assets/DrittyPope Logo.png"
+          style="
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            width: 100px;
+            height: 100px;
+          "
+        />
+        <button
+          id="shareButton"
+          onclick="shareSandwich()"
+          style="
+            color: rgb(152, 231, 255);
+            text-decoration-line: underline;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 700;
+            font-size: 35px;
+            width: 80%;
+            margin-top: 0px;
+            font-family: Jua1;
+            src: url(LemonMilk.otf);
+          "
+        >
+          SHARE YOUR SANDWICH
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const ingredients = {
+        "Whole-Bread": ["250px", "150px"],
+        "Rye-Bread": ["200px", "200px"],
+        "Pumpernickel-Bread": ["180px", "150px"],
+        Ham: ["180px", "130px"],
+        Lox: ["180px", "180px"],
+        Pastrami: ["180px", "180px"],
+        Lettuce: ["160px", "160px"],
+        Tomato: ["180px", "180px"],
+        Onions: ["130px", "130px"],
+        Pickles: ["120px", "90px"],
+        "Cheddar-cheese": ["180px", "180px"],
+        "Provolone-cheese": ["180px", "180px"],
+        "Swiss-cheese": ["180px", "180px"],
+        "Pepper-Jack-Cheese": ["180px", "180px"],
+        "Hot-Sauce": ["180px", "180px"],
+        Mayonase: ["180px", "180px"],
+        "BBQ-sauce": ["180px", "180px"],
+        Mustard: ["100px", "100px"],
+        Bacon: ["180px", "180px"],
+        Turkey: ["160px", "180px"],
+        Salami: ["160px", "180px"],
+        Tuna: ["180px", "180px"],
+        Avacado: ["180px", "180px"],
+        Beef: ["180px", "180px"],
+        Bologna: ["160px", "180px"],
+        Jalapenos: ["150px", "180px"],
+      };
+
+      const indexTopMargin = [
+        "",
+        "-280px",
+        "-200px",
+        "-250px",
+        "-200px",
+        "-200px",
+        "-180px",
+        "-200px",
+        "-180px",
+        "-100px",
+        "-150px",
+        "-200px",
+        "-180px",
+        "-180px",
+        "-200px",
+        "-200px",
+        "-200px",
+        "-200px",
+        "-170px",
+        "-150px",
+        "-200px",
+        "-200px",
+        "-200px",
+        "-180px",
+        "-180px",
+        "-230px",
+        "-200px",
+      ];
+
+      var placedIngredients = [];
+
+      var currentIngredientHolding = "";
+
+      function resize(zoom) {
+        document.body.style.zoom = 1 / zoom;
+      }
+
+      // var isMobile = navigator.userAgentData.mobile; //resolves true/false
+      const mobileAndTabletCheck = function () {
+        let check = false;
+        (function (a) {
+          if (
+            /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(
+              a
+            ) ||
+            /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
+              a.substr(0, 4)
+            )
+          )
+            check = true;
+        })(navigator.userAgent || navigator.vendor || window.opera);
+        return check;
+      };
+
+      var isMobile = mobileAndTabletCheck();
+
+      if (isMobile) {
+        document.getElementById("bg").style.display = "none";
+        resize(3);
+
+        document
+          .getElementById("body")
+          .setAttribute(
+            "onclick",
+            "{document.getElementById('body').requestFullscreen(); screen.orientation.lock('landscape'); document.getElementById('body').setAttribute('onclick', '')}"
+          );
+
+        document.getElementById("ingredientsPlace").style.marginRight = "30px";
+
+        document.getElementById("bg-mobile").style.display = "flex";
+
+        document.getElementById("submitBtn").style.width = "800px";
+        document.getElementById("submitBtn").style.height = "220px";
+        document.getElementById("submitBtn").style.marginBottom = "50px";
+        document.getElementById("submitTxt").style.fontSize = "100px";
+        document.getElementById("submitTxt").style.marginTop = "30px";
+      }
+
+      function shareSandwich() {
+        const element = document.getElementById("sandwichBuild");
+
+        html2canvas(element, {
+          onrendered: function (canvas) {
+            var imgData = canvas.toDataURL("image/png");
+
+            // Create a link element
+            var link = document.createElement("a");
+            link.download = "sandwich.png"; // Set the download attribute to specify the file name
+            link.href = imgData; // Set the data URL as the href attribute
+
+            // Append the link to the document body
+            document.body.appendChild(link);
+
+            // Trigger a click event on the link to initiate download
+            link.click();
+
+            // Remove the link from the document body
+            document.body.removeChild(link);
+          },
+        });
+      }
+
+      function submitSandwich() {
+        document.getElementById("submitPage").style.display = "flex";
+        toggleElements(false);
+      }
+      function randomWholeNumber(start, end) {
+        return Math.floor(Math.random() * (end - start + 1)) + start;
+      }
+
+      function placeIngredients(ingredient) {
+        if (ingredient == null) {
+          return;
+        }
+
+        var soundEffect = randomWholeNumber(0, 4);
+        soundEffect = "./Assets/" + soundEffect + ".mp3";
+
+        // Create an Audio object
+        var audio = new Audio(soundEffect);
+        // Play the audio
+        audio.play();
+
+        const iInfo = ingredients[ingredient];
+
+        const ingredientElem = document.createElement("img");
+        ingredientElem.src = "/Assets/" + ingredient + ".png";
+        ingredientElem.style.width = iInfo[0];
+        ingredientElem.style.height = iInfo[1];
+        ingredientElem.style.position = "absolute";
+        ingredientElem.style.marginLeft = "20px";
+        ingredientElem.style.marginBottom =
+          10 * placedIngredients.length + "px";
+        ingredientElem.setAttribute("onmouseover", "hoverElement(this)");
+        ingredientElem.setAttribute("onmouseleave", "hoverLeave(this)");
+        ingredientElem.setAttribute("onclick", "deleteIngredient(this)");
+        ingredientElem.id = ingredient;
+        ingredientElem.name = placedIngredients.length;
+
+        placedIngredients.push(ingredient);
+
+        document.getElementById("sandwichBuild").appendChild(ingredientElem);
+
+        if (placedIngredients.length >= 3) {
+          document.getElementById("submitBtn").style.display = "block";
+        } else {
+          document.getElementById("submitBtn").style.display = "none";
+        }
+      }
+
+      function rebuildSandwich() {
+        var prevPlacedIngredients = [...placedIngredients];
+        placedIngredients = [];
+        for (i in prevPlacedIngredients) {
+          var ingredient = prevPlacedIngredients[i];
+          console.log(ingredient);
+          placeIngredients(ingredient);
+        }
+      }
+
+      function hoverElement(elem) {
+        console.log("hoverelement");
+        // console.log(elem)
+        elem.style.opacity = 0.5;
+
+        const idName = elem.id.replace("-", " ");
+
+        document.getElementById("ingredientSelctedTxt").innerHTML =
+          "ingredient selected: " + idName;
+      }
+      function hoverLeave(elem) {
+        if (elem) {
+          elem.style.opacity = 1;
+        }
+        document.getElementById("ingredientSelctedTxt").innerHTML = "";
+      }
+
+      function deleteIngredient(elem) {
+        placedIngredients[JSON.parse(elem.name)] = null;
+        elem.remove();
+
+        document.getElementById("sandwichBuild").innerHTML = "";
+        rebuildSandwich();
+        hoverLeave();
+      }
+
+      function clickIngredient(id) {
+        console.log("clicked ingredient " + id);
+
+        placeIngredients(id);
+
+        // const ing = document.createElement('img')
+        // ing.style.width = (JSON.parse(ingredients[id][0].split('px')[0]) / 2.4) + 'px'
+        // ing.style.height = (JSON.parse(ingredients[id][1].split('px')[0]) / 2.4) + 'px'
+        // ing.style.position = 'absolute'
+        // ing.src = '/Assets/' + id + '.png'
+        // ing.id = id + '1'
+        // // ing.setAttribute('onmousedown', 'pickupIngredient("'+ing.id+'")')
+
+        // document.getElementById('body').appendChild(ing)
+
+        // currentIngredientHolding = id + '1'
+      }
+
+      function fillIngredients() {
+        for (ingredient in ingredients) {
+          const ing = document.createElement("img");
+          ing.style.width =
+            JSON.parse(ingredients[ingredient][0].split("px")[0]) / 2.4 + "px";
+          ing.style.height =
+            JSON.parse(ingredients[ingredient][1].split("px")[0]) / 2.4 + "px";
+          ing.src = "/Assets/" + ingredient + ".png";
+          ing.setAttribute(
+            "onmousedown",
+            'clickIngredient("' + ingredient + '")'
+          );
+          ing.id = ingredient;
+          ing.title = ingredient;
+
+          document.getElementById("ingredientsPlace").appendChild(ing);
+        }
+      }
+
+      fillIngredients();
+
+      function events() {
+        addEventListener("mousedown", (e) => {
+          // console.log(e.target.id)
+          // currentIngredientHolding = e.target.id
+          // if(currentIngredientHolding[currentIngredientHolding.length-1] != '1')
+          // {
+          //     currentIngredientHolding = e.target.id + '1'
+          // }
+          // console.log(e.clientX)
+        });
+        // addEventListener('mouseup', () => {
+        //     currentIngredientHolding = ''
+        // })
+        // addEventListener('mousemove', (e) => {
+        //     console.log(currentIngredientHolding)
+        //     if(currentIngredientHolding != '')
+        //     {
+        //         console.log(currentIngredientHolding)
+        //         const mouseX = e.clientX
+        //         const mouseY = e.clientY
+
+        //         console.log(mouseX + ' ' + mouseY)
+
+        //         // console.log(currentIngredientHolding)
+        //         // console.log(document.getElementById(currentIngredientHolding))
+        //         document.getElementById(currentIngredientHolding).style.left = mouseX + 'px'
+        //         document.getElementById(currentIngredientHolding).style.top = mouseY + 'px'
+        //     }
+        // })
+      }
+
+      events();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+    <style>
+      @font-face {
+        font-family: Jua1;
+        src: url(LemonMilk.otf);
+      }
+
+      body {
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+
+        font-family: "Jua1", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+
+        background-color: #55827f;
+      }
+
+      *::-webkit-scrollbar {
+        width: 15px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: #fddeaf;
+        border-radius: 25px;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #fcaa2c;
+        border-radius: 25px;
+        border: transparent;
+      }
+
+      * {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+      }
+
+      .submitBtn {
+        background-color: #6b9591;
+        cursor: pointer;
+      }
+      .submitBtn:hover {
+        background-color: #5f8591;
+      }
+    </style>
+    <audio
+      controls
+      style="position: fixed; bottom: 0; left: 0; margin: 20px 10px"
+    >
+      <source src="./Assets/sandwichbuilder.club.mp3" type="audio/mpeg" />
+      Your browser does not support autoplay.
+    </audio>
+    <div
+      id="helpBubble"
+      onclick="toggleHelp()"
+      style="
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #3ebaea;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 999;
+      "
+    >
+      <p style="color: white; font-size: 24px; margin: 0">?</p>
+    </div>
+    <div
+      id="helpContent"
+      style="
+        display: none;
+        position: fixed;
+        bottom: 90px;
+        right: 90px;
+        color: #fff;
+        background-color: #3ebaea;
+        width: 33vw;
+        height: auto;
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 999;
+      "
+    >
+      <p style="font-size: 1.8vw; font-weight: 400; text-align: center">
+        WELCOME TO SANDWICHBUILDER.CLUB
+      </p>
+      <p style="font-size: 1.3vw; text-align: center">
+        BUILD THE INFINITE SANDWICH OF YOUR DREAMS
+      </p>
+      <p style="font-size: 1.3vw; text-align: center">
+        CLICK THE PLAY BUTTON TO HEAR “SANDWICHBUILDER.CLUB”
+      </p>
+      <p style="font-size: 1.3vw; text-align: center">
+        ADD AT LEAST THREE INGREDIENTS
+      </p>
+      <p style="font-size: 1.3vw; text-align: center">
+        CLICK THE INGREDIENT TO REMOVE IT
+      </p>
+      <p style="font-size: 1.3vw; text-align: center">
+        HAVE FUN AND SHARE UR SANDWICH PLS !!!
+      </p>
+    </div>
+
+    <script>
+      function toggleHelp() {
+        const helpContent = document.getElementById("helpContent");
+        helpContent.style.display =
+          helpContent.style.display === "none" ||
+          helpContent.style.display === ""
+            ? "block"
+            : "none";
+      }
+    </script>
+  </body>
+</html>
